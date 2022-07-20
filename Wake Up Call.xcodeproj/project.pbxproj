@@ -14,6 +14,12 @@
 		0A262CFD2881E676006CA9CD /* Wake_Up_CallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A262CFC2881E676006CA9CD /* Wake_Up_CallTests.swift */; };
 		0A262D072881E676006CA9CD /* Wake_Up_CallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A262D062881E676006CA9CD /* Wake_Up_CallUITests.swift */; };
 		0A262D092881E676006CA9CD /* Wake_Up_CallUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A262D082881E676006CA9CD /* Wake_Up_CallUITestsLaunchTests.swift */; };
+		0A7318642881F53A006C8DE3 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7318632881F53A006C8DE3 /* MenuButton.swift */; };
+		0AB6DE6728820126005D7384 /* ButtonPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB6DE6628820126005D7384 /* ButtonPanel.swift */; };
+		0AB6DE6A2882015E005D7384 /* MemorizeIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB6DE692882015E005D7384 /* MemorizeIt.swift */; };
+		0AB6DE6C288202A5005D7384 /* NumberAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB6DE6B288202A5005D7384 /* NumberAnimation.swift */; };
+		0AC55C1C2884736500CFCD89 /* PopTheLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC55C1B2884736500CFCD89 /* PopTheLock.swift */; };
+		0AC55C1E2888059300CFCD89 /* MathGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC55C1D2888059300CFCD89 /* MathGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		0A262D022881E676006CA9CD /* Wake Up CallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wake Up CallUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A262D062881E676006CA9CD /* Wake_Up_CallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wake_Up_CallUITests.swift; sourceTree = "<group>"; };
 		0A262D082881E676006CA9CD /* Wake_Up_CallUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wake_Up_CallUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0A7318632881F53A006C8DE3 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		0AB6DE6628820126005D7384 /* ButtonPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPanel.swift; sourceTree = "<group>"; };
+		0AB6DE692882015E005D7384 /* MemorizeIt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeIt.swift; sourceTree = "<group>"; };
+		0AB6DE6B288202A5005D7384 /* NumberAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberAnimation.swift; sourceTree = "<group>"; };
+		0AC55C1B2884736500CFCD89 /* PopTheLock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopTheLock.swift; sourceTree = "<group>"; };
+		0AC55C1D2888059300CFCD89 /* MathGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +108,10 @@
 			children = (
 				0A262CEB2881E674006CA9CD /* Wake_Up_CallApp.swift */,
 				0A262CED2881E674006CA9CD /* ContentView.swift */,
+				0AB6DE6B288202A5005D7384 /* NumberAnimation.swift */,
+				0AB6DE6628820126005D7384 /* ButtonPanel.swift */,
+				0AB6DE6828820147005D7384 /* Activities */,
+				0A7318632881F53A006C8DE3 /* MenuButton.swift */,
 				0A262CEF2881E675006CA9CD /* Assets.xcassets */,
 				0A262CF12881E675006CA9CD /* Preview Content */,
 			);
@@ -125,6 +141,16 @@
 				0A262D082881E676006CA9CD /* Wake_Up_CallUITestsLaunchTests.swift */,
 			);
 			path = "Wake Up CallUITests";
+			sourceTree = "<group>";
+		};
+		0AB6DE6828820147005D7384 /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				0AB6DE692882015E005D7384 /* MemorizeIt.swift */,
+				0AC55C1B2884736500CFCD89 /* PopTheLock.swift */,
+				0AC55C1D2888059300CFCD89 /* MathGame.swift */,
+			);
+			path = Activities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +283,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AB6DE6A2882015E005D7384 /* MemorizeIt.swift in Sources */,
+				0AB6DE6728820126005D7384 /* ButtonPanel.swift in Sources */,
 				0A262CEE2881E674006CA9CD /* ContentView.swift in Sources */,
 				0A262CEC2881E674006CA9CD /* Wake_Up_CallApp.swift in Sources */,
+				0AC55C1C2884736500CFCD89 /* PopTheLock.swift in Sources */,
+				0AC55C1E2888059300CFCD89 /* MathGame.swift in Sources */,
+				0A7318642881F53A006C8DE3 /* MenuButton.swift in Sources */,
+				0AB6DE6C288202A5005D7384 /* NumberAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
