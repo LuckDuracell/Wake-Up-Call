@@ -75,13 +75,10 @@ struct MemorizeIt: View {
                     Button {
                         var output = 0
                         for i in 0...5 {
-                            print(values[i])
-                            print(num[i])
-                            if "\(values[i]!)" == "\(num[i])" {
+                            if "\(values[i] ?? 0)" == "\(num[i])" {
                                 output += 1
                             }
                         }
-                        print(output)
                         if output > 5 {
                             gameEnd = 1
                         } else {
