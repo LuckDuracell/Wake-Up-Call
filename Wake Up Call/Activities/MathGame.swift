@@ -36,69 +36,92 @@ struct MathGame: View {
 
     
     var body: some View {
-        VStack {
-            if gameEnd == 0 {
-                HStack {
-                Text("\(num)")
-                    .font(.title.bold())
-                    .padding(3)
-                    .shadow(radius: 2, x: 2, y: 2)
-                Text(mathType)
-                    .font(.title.bold())
-                    .padding(3)
-                    .shadow(radius: 2, x: 2, y: 2)
-                Text("\(num2)")
-                    .font(.title.bold())
-                    .padding(3)
-                    .shadow(radius: 2, x: 2, y: 2)
-                }
-                
-                TextField("", text: $userAnswer)
-                    .multilineTextAlignment(.center)
-                    .keyboardType(.decimalPad)
-                    .frame(width: 130, height: 60, alignment: .center)
-                    .background(.regularMaterial)
-                    .padding(5)
-                
-                Button {
-                    if checkAnswer(userAnswer: userAnswer) {
-                        gameEnd = 1
-                    } else {
-                        gameEnd = 2
+        ZStack {
+            Image("sunset")
+                .resizable()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
+                .blur(radius: 16)
+            VStack {
+                if gameEnd == 0 {
+                    HStack {
+                        Text("\(num)")
+                            .font(.title.bold())
+                            .padding(3)
+                            .shadow(radius: 2, x: 2, y: 2)
+                        Text(mathType)
+                            .font(.title.bold())
+                            .padding(3)
+                            .shadow(radius: 2, x: 2, y: 2)
+                        Text("\(num2)")
+                            .font(.title.bold())
+                            .padding(3)
+                            .shadow(radius: 2, x: 2, y: 2)
+                    } .foregroundColor(.white)
+                    
+                    TextField("", text: $userAnswer)
+                        .multilineTextAlignment(.center)
+                        .keyboardType(.decimalPad)
+                        .frame(width: 130, height: 60, alignment: .center)
+                        .background(.regularMaterial)
+                        .padding(5)
+                        .bold()
+                    
+                    Button {
+                        if checkAnswer(userAnswer: userAnswer) {
+                            gameEnd = 1
+                        } else {
+                            gameEnd = 2
+                        }
+                    } label: {
+                        Text("Check Answer")
+                            .foregroundColor(.pink)
+                            .font(.title.bold())
+                            .padding()
+                            .background(
+                                RoundedRectangle(cornerRadius: 15, style: .continuous)
+                                    .fill(
+                                        .shadow(.inner(color: Color(red: 197/255, green: 197/255, blue: 197/255).opacity(0.9),radius: 3, x:3, y: 3))
+                                        .shadow(.inner(color: .white, radius: 3, x: -3, y: -3))
+                                    )
+                                    .foregroundColor(Color(red: 236/255, green: 234/255, blue: 235/255))
+                            )
                     }
-                } label: {
-                    Text("Check Number")
-                        .foregroundColor(.indigo)
-                        .font(.title.bold())
-                        .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: 15, style: .continuous)
-                                .fill(
-                                    .shadow(.inner(color: Color(red: 197/255, green: 197/255, blue: 197/255).opacity(0.9),radius: 3, x:3, y: 3))
-                                    .shadow(.inner(color: .white, radius: 3, x: -3, y: -3))
-                                )
-                                .foregroundColor(Color(red: 236/255, green: 234/255, blue: 235/255))
-                        )
-                }
-            } else if gameEnd == 1 {
-                Text("Oh wait you actually won!")
-            } else {
-                Text("You lost lmao")
-                Button {
-                    gameEnd = 0
-                    num = Int.random(in: 10...99)
-                    num2 = Int.random(in: 10...99)
-                    mathType = generateMathType()
-                    userAnswer = ""
-                } label: {
-                    Text("Tap to try again")
+                } else if gameEnd == 1 {
+                    Text("Oh wait you actually won!")
+                        .foregroundColor(.white)
+                } else {
+                    Text("You lost lmao")
+                        .foregroundColor(.white)
+                    Button {
+                        gameEnd = 0
+                        num = Int.random(in: 10...99)
+                        num2 = Int.random(in: 10...99)
+                        mathType = generateMathType()
+                        userAnswer = ""
+                    } label: {
+                        Text("Try Again")
+                            .foregroundColor(.pink)
+                            .font(.title.bold())
+                            .padding()
+                            .background(
+                                RoundedRectangle(cornerRadius: 15, style: .continuous)
+                                    .fill(
+                                        .shadow(.inner(color: Color(red: 197/255, green: 197/255, blue: 197/255).opacity(0.9),radius: 3, x:3, y: 3))
+                                        .shadow(.inner(color: .white, radius: 3, x: -3, y: -3))
+                                    )
+                                    .foregroundColor(Color(red: 236/255, green: 234/255, blue: 235/255))
+                            )
+                    }
                 }
             }
-        } .toolbar(content: {
-            ToolbarItem(placement: .keyboard, content: {
-                Button { userAnswer += "-" } label: { Text("-") }
+            .frame(width: UIScreen.main.bounds.width)
+            .toolbar(content: {
+                ToolbarItem(placement: .keyboard, content: {
+                    Button { userAnswer += "-" } label: { Text("-") }
+                })
             })
-        })
+        }
     }
 }
 
