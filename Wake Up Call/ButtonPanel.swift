@@ -11,7 +11,7 @@ struct ButtonPanel: View {
     var body: some View {
         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())], content: {
             MenuButton(gameView: MemorizeIt(), gameIcon: "brain.head.profile")
-            MenuButton(gameView: {Text("Lol")}(), gameIcon: "arrow.counterclockwise.circle.fill")
+            MenuButton(gameView: PopTheLock(), gameIcon: "arrow.counterclockwise.circle.fill")
             MenuButton(gameView: {Text("Lol")}(), gameIcon: "cup.and.saucer.fill")
             MenuButton(gameView: {Text("Lol")}(), gameIcon: "questionmark.bubble.fill")
             MenuButton(gameView: {Text("Lol")}(), gameIcon: "newspaper.circle.fill")
